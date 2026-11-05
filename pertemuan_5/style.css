@@ -12,11 +12,15 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 16px;
-    background: #1f4e79;
+    background-color: #333;
     color: white;
 }
 
 .logo {
+    margi: 0;
+}
+
+nav {
     display: flex;
     gap: 16px;
 }
@@ -28,35 +32,41 @@ nav a {
 
 footer {
     padding: 16px;
-    background: #eeeeee
+    background-color: #eeeeee;
 }
 
 main {
     display: grid;
-    grid: template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
     padding: 16px;
 }
 
 .kartu {
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 16px
+    padding: 16px;
 }
 
 .kartu h3 {
-    magin-top: 0;
+    margin-top: 0;
 }
 
-@media (min-width: 600px) { 
-    main { 
-    grid-template-columns: repeat(2, 1fr);
- } 
-} 
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
-@media (min-width: 992px) { 
-  main { 
-    grid-template-columns: repeat(3, 1fr); 
- } 
-} 
+@media (min-width: 992px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
+@media (max-widt: 599px) {
+    header {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
