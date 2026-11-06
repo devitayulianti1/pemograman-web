@@ -47,6 +47,7 @@ main {
     border-radius: 8px;
     padding: 25px;
     width: 300px;
+    box-sizing: border-box;
 }
 
 .kartu h3 {
